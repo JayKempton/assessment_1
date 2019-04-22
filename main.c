@@ -5,11 +5,11 @@ int main() {
 char message[100], ch;  //use the array message to store the user input
 int x, key;
 printf("Enter a message to encrypt: ");
-gets(message);
+gets(message);    //Using gets makes it easier to store sting data in the variable "message" than scanf
 printf("Enter key: ");
 scanf("%d", &key);
-for(x = 0; message[x] != '\0'; ++x){    //use a for loop to count 
-ch = message[x];
+for(x = 0; message[x] != '\0'; ++x){    //use a for loop to count the character in the string and assign them a value in the array
+ch = message[x];    
 if(ch >= 'a' && ch <= 'z'){
 ch = ch + key;
 if(ch > 'z'){
