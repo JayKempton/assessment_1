@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-
+  
 char message[100], ch;  //use the array message to store the user input
 int x, key;
 printf("Enter a message to encrypt: ");
@@ -12,7 +12,7 @@ for(x = 0; message[x] != '\0'; ++x){    //use a for loop to count the character 
 ch = message[x];    
 if(ch >= 'a' && ch <= 'z'){
 ch = ch + key;
-if(ch > 'z'){
+if(ch > 'z'){             // create if statements to determine the spaces the characters must move to become encrypted
 ch = ch - 'z' + 'a' - 1;
 }
 message[x] = ch;
@@ -25,7 +25,7 @@ ch = ch - 'Z' + 'A' - 1;
 message[x] = ch;
 }
 }
-printf("Encrypted message: %s", message);
+printf("Encrypted message: %s", message);     //print the encrypted message  
 return 0;
 
 
